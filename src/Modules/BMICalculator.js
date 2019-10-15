@@ -1,8 +1,7 @@
 export const bmiCalculation = (weight, height, method) => {
   parseFloat(weight);
   parseFloat(height);
-  let bmi_metric;
-  let bmi_imperial;
+  let bmi;
 
   weight = isNaN(weight) ? 0 : weight;
   height = isNaN(height) ? 0 : height;
@@ -13,7 +12,7 @@ if (method === "metric") {
   bmi = ( weight / ( height * height )) * 703;
 } 
 
-  let finalBMI = parseFloat(bmi_metric.toFixed(2));
+  let finalBMI = parseFloat(bmi.toFixed(2));
   let BMIMessage = setBMIMessage(finalBMI)
   if (isNaN(finalBMI) || !isFinite(finalBMI) || finalBMI === 0) {
     return '';
