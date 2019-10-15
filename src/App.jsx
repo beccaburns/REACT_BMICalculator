@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import DisplayResult from './Components/displayResult'
+import MethodSelect from './Components/methodSelect'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       weight: '', 
-      height: ''
+      height: '',
+      method: ''
     }
+  }
+
+  methodChange = (event) => {
+    this.setState({
+      method: event.target.innerHTML
+    })
   }
 
   render() {
@@ -29,7 +37,7 @@ class App extends Component {
             <option value="metric">Metric</option>
             <option Value="imperial">Imperial</option>
           </select>
-          </div>
+        </div>
 
         <DisplayResult
           weight={this.state.weight}
