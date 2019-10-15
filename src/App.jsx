@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>BMI Converter</h1>
+        <h2>Please enter your weight & height below.</h2>
         <div>
           <label>weight(kg)</label>
           <input name="weight" value={this.state.weight} onChange={ (e) => this.setState({ weight: e.target.value })} />

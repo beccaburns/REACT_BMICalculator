@@ -1,6 +1,7 @@
 export const bmiCalculation = (weight, height, method) => {
   parseFloat(weight);
   parseFloat(height);
+  parseFloat(method);
   let bmi;
 
   weight = isNaN(weight) ? 0 : weight;
