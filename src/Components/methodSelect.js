@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React from "react";
 
-class MethodSelect extends Component {
-  render() {
-    return (
+function MethodSelect(props) {
+  return (
+    <>
       <div>
-      <select form id="method">
-        <option value="metric">Metric</option>
-        <option Value="imperial">Imperial</option>
-      </select>
-    </div>
-    )
-  }
+      <label>Method</label>
+        <select className="method-selector" name="method" id="method" onChange={props.onChangeValue} value={props.method}>
+          <option value="metric">Metric</option>
+          <option value="imperial">Imperial</option>
+        </select>
+      </div>
+    </>
+  );
 }
-
-export default MethodSelect
+export default MethodSelect;
